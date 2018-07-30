@@ -5,6 +5,7 @@ const localization = {
     numberOfIteration: 'Number of iteration',
     delaySpeed: 'Delay (speed)',
     generate: 'Generate',
+    snapshot: 'Snapshot (NThan)',
     arcIterationStep: 'Arc iteration step'
 }
 
@@ -56,6 +57,12 @@ function setup() {
     generateButton = createButton(localization.generate);
     generateButton.mousePressed(generateRecamanSequence);
     generateButton.position(canvas.width, sequenceNumberInput.height + delayInput.height + arcIterationStepInput.height + 15);
+
+    snapshotButton = createButton(localization.snapshot);
+    snapshotButton.mousePressed(() => {
+        saveCanvas(canvas, 'recaman_sequence', 'jpg');
+    });
+    snapshotButton.position(canvas.width + generateButton.width + 10, sequenceNumberInput.height + delayInput.height + arcIterationStepInput.height + 15)
 }
 
 function generateRecamanSequence() {
