@@ -36,19 +36,19 @@ function setup() {
     background(0);
     
     // inputs, html
-    sequenceNumberInput = createInput('60', 'number');
+    sequenceNumberInput = createInput('120', 'number');
     sequenceNumberInput.elt.step = '20';
     let labelNumberInput = createSpan(localization.numberOfIteration);
     labelNumberInput.position(canvas.width, 0);
     sequenceNumberInput.position(canvas.width + 150, 0);
 
-    delayInput = createInput('1', 'number');
+    delayInput = createInput('0.5', 'number');
     delayInput.elt.step = '0.5';
     let labelDelayInput = createSpan(localization.delaySpeed);
     labelDelayInput.position(canvas.width, sequenceNumberInput.height + 5);
     delayInput.position(canvas.width + 150, sequenceNumberInput.height + 5);
 
-    arcIterationStepInput = createInput('1', 'number');
+    arcIterationStepInput = createInput('0.5', 'number');
     arcIterationStepInput.elt.step = '0.5';
     let labelArcIterationStepInput = createSpan(localization.arcIterationStep);
     labelArcIterationStepInput.position(canvas.width, sequenceNumberInput.height + delayInput.height + 10);
